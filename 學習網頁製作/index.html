@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>獨立研究-史萊姆黏性檢測實驗設計</title>
+    <style>
+        /* CSS 樣式設定 */
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* 防止捲動條出現 */
+            background-color: #f4f7f6; /* 淡灰背景，凸顯專業感 */
+            font-family: "Microsoft JhengHei", "Heiti TC", sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* 大標題樣式 */
+        h1 {
+            font-size: 3.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 副標題樣式 */
+        p.subtitle {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        /* 按鈕容器樣式 */
+        .btn-container {
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-container:hover {
+            transform: scale(1.05); /* 滑鼠懸停放大效果 */
+        }
+
+        .btn-container:active {
+            transform: scale(0.95); /* 點擊時縮小效果 */
+        }
+
+        /* 圖片按鈕樣式 */
+        #start-btn-img {
+            max-width: 300px; /* 限制圖片最大寬度 */
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            border: 4px solid #fff;
+        }
+
+        /* 鍵盤聚焦時的樣式 (無障礙設計) */
+        a:focus img {
+            outline: 4px solid #3498db;
+            box-shadow: 0 0 15px #3498db;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>獨立研究-史萊姆黏性檢測實驗設計</h1>
+    
+    <p class="subtitle">點擊下方按鈕或按下 Enter 鍵開始瀏覽實驗成果</p>
+
+    <a href="1.html" id="link-trigger">
+        <img src="0.png" alt="開始按鈕" id="start-btn-img">
+    </a>
+
+    <script>
+        // JavaScript 用於處理鍵盤事件 (Enter 和 Space)
+        document.addEventListener('keydown', function(event) {
+            // 檢查是否按下了 Enter 或 Space (空白鍵)
+            if (event.code === 'Enter' || event.code === 'Space') {
+                // 防止 Space 鍵造成網頁捲動的預設行為
+                event.preventDefault();
+                
+                // 觸發跳轉
+                // 模擬點擊連結
+                document.getElementById('link-trigger').click();
+            }
+        });
+    </script>
+
+</body>
+</html>
